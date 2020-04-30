@@ -1,0 +1,47 @@
+//vket4_world_loader
+//Vケット4のワールドを順次ロードするuwscスクリプト
+//License: CC0
+
+CALL vrchat_world_loader.uws
+
+//以下の順番でワールドをロードする。
+//多数のワールドがあるので、行きたい順番に並べ替えて使う。
+//ロード不要のワールドは、World_Openの前に「//」を入れるとスキップされる。
+
+ World_Open("wrld_a8e574a0-6f7e-4cd1-bf40-a0f831693ecf") //Vket4 Parareal Tokyo
+ World_Open("wrld_15bbac18-a0f7-4495-b9c1-47d06bf34425") //Vket4_Default Cube［DC_01］
+ World_Open("wrld_ef01f651-5feb-4403-b67c-7a9be37ddb00") //Vket4_Default Cube［DC_02］
+ World_Open("wrld_7b0a034b-fb6f-4f99-96fe-816319a3985a") //Vket4_Default Cube［DC_03］
+ World_Open("wrld_ac5a8a17-7f8f-4920-9312-0f3633cf6d7c") //Vket4_Default Cube［DC_04］
+ World_Open("wrld_0e2f2d42-153c-42b0-8f85-6e6157f30278") //Vket4_Default Cube［DC_05］
+ World_Open("wrld_81fb16bf-77ed-42f1-b3fd-5ad25921c6ae") //Vket4_Default Cube［DC_06］
+ World_Open("wrld_d4ff8967-6663-482d-864a-aac59f406895") //Vket4_Default Cube［DC_07］
+ World_Open("wrld_0b76f22c-6bdc-488d-a05a-3cf998bfd89b") //Vket4_Avatar Showcase［rouge］
+ World_Open("wrld_efc2df18-0edf-48cf-b604-3668fa1d490e") //Vket4_Avatar Showcase［blau］
+ World_Open("wrld_d90be8ff-7d1e-45c6-9049-058b3629f4df") //Vket4_Avatar Showcase［groen］
+ World_Open("wrld_23d691cf-f1ab-4aa5-b4c5-d1d0625c6501") //Vket4_Avatar Showcase［violet］
+ World_Open("wrld_ff3d34cb-4ac2-42d1-8b07-09d5194bfa54") //Vket4_Avatar Showcase［aqua］
+ World_Open("wrld_e9542af4-2caa-4f93-9003-3550f2055b1d") //Vket4_Alaya Vijnana［Tou］
+ World_Open("wrld_fb31e36e-c31b-4751-98b8-a705edcaf4a0") //Vket4_Alaya Vijnana［Kaku］
+ World_Open("wrld_07140e26-18eb-479a-9d7e-d2453ed74041") //Vket4_Alaya Vijnana［Ri］
+ World_Open("wrld_468601cb-ee95-4acb-b285-83c85f91e946") //Vket4_Alaya Vijnana［Ren］
+ World_Open("wrld_fc76ad96-41d4-44a5-b834-6ffa9d9927f1") //Vket4_Alaya Vijnana［Shu］
+ World_Open("wrld_3a78d188-7a1d-453a-9284-8fae2c4560bc") //Vket4_CC Mirabilis［Raiz］
+ World_Open("wrld_bd87c877-42ba-4e60-9bca-8e3ea3b700df") //Vket4_CC Mirabilis［Tallo］
+ World_Open("wrld_3adf72e7-f10d-4f02-ac52-fe5e8cdd8d88") //Vket4_CC Mirabilis［Flor］
+ World_Open("wrld_3857c918-b042-48b1-b275-9d86e0ecfbfd") //Vket4_CC Mirabilis［Fruta］
+ World_Open("wrld_7c7a30a1-4327-419e-8fd1-97ecad19871f") //Vket4_CC Mirabilis［Hojal］
+ World_Open("wrld_dd723f4e-5b7e-45dc-92b7-173aeb25abbd") //Vket4_Nursery Rhyme［Club］
+ World_Open("wrld_faaefdda-e865-420c-8f20-a880ef726301") //Vket4_Nursery Rhyme［Diamond］
+ World_Open("wrld_3a9ae3d9-ca70-4084-8ace-6aa9e96d080c") //Vket4_Nursery Rhyme［Heart］
+ World_Open("wrld_4896e85b-4c89-478e-93c6-c6cd20dd4d57") //Vket4_Nursery Rhyme［Spade］
+ World_Open("wrld_ecc64b13-97fb-43df-bd1c-2e55925ebd0f") //Vket4_Nursery Rhyme［Torus］
+ World_Open("wrld_c23ae110-0f8b-4ac4-b4ce-992e760b43d9") //Vket4_Worldend Utopia［Delta］
+ World_Open("wrld_2217c86f-ab05-43f9-835c-a60e421bbc25") //Vket4_Worldend Utopia［Foxtrot］
+ World_Open("wrld_460c329d-68b1-41b3-b67f-b2cf69f9d517") //Vket4_Worldend Utopia［Juliett］
+ World_Open("wrld_a1af71b9-4137-4985-a186-50dcc94cc81b") //Vket4_Worldend Utopia［November］
+ World_Open("wrld_b98288fc-924b-4806-b17d-fded7d74ae81") //Vket4_Worldend Utopia［Oscar］
+ World_Open("wrld_ddc73b8f-a01c-49f1-9cd1-84b6167ea667") //Vket4_Worldend Utopia［Quebec］
+ World_Open("wrld_c1ff3135-808b-425c-bcaf-b350222b75ef") //Vket4_Worldend Utopia［Romeo］
+ World_Open("wrld_dcc99007-c63d-4187-aa1a-348010fdba43") //Vket4_Worldend Utopia［Sierra］
+

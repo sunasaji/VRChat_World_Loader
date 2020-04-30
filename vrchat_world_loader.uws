@@ -1,0 +1,114 @@
+//vrchat_world_loader
+//VRChatのワールドを順次ロードするuwscスクリプト
+//License: CC0
+
+PUBLIC instance_id, check_interval, user_id
+
+//使い方
+// 1. VR機器をPCから外してデスクトップモードでVRChatが起動できるようにする。
+// 2. VRChatメニューの「SETTINGS」の「SKIP GO BUTTON IN LOAD」にチェックを入れる。
+// 3. 下記の「user_id = 」から始まる行の「usr_xxx...」の部分に、自分のユーザIDを設定して保存する。
+// 4. 開きたいワールドのIDが記入されたスクリプトを、UWSC.exeにドラッグ＆ドロップして放置する。
+//    数分おきにVRCウィンドウがアクティブになり、ワールドが自動でロードされる。
+
+user_id = "usr_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+
+// 自分のユーザIDは、
+//  vrchat.comにログインして、左上の自分のアイコンをクリックすると
+//  ブラウザのアドレスバーに出る「usr_」から始まる文字列。
+
+// 「このvrchatを開くには新しいアプリが必要です」とメッセージが出た場合は、
+// "C:\Program Files  (x86)\Steam\steamapps\common\VRChat" にある install.exe を実行して、
+// チェックを入れて「Proceed」を押す。
+// 「vrchat://」形式のリンクをVRChatで開けるようになる。
+
+//インスタンスIDをランダム生成
+instance_id=int(random(100000))
+//ワールドロード完了をチェックする間隔(単位：秒)
+check_interval = 300
+
+//ワールドをロードする
+//World_Open("wrld_...") の wrld_... の部分にワールドIDを入れて、行頭の「//」を消すと、
+//そのワールドをロードする。ロードが終わるとVRChatを一旦閉じて、次のワールドをロードする。
+//ロード不要のワールドは、World_Openの前に「//」を入れるとスキップされる。
+
+// World_Open("wrld_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx")
+// World_Open("wrld_yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy")
+
+//ワールドを開いて、ロード完了を待つ
+function World_Open(str)
+ nonce = RandomUUID()
+ world_url = "vrchat://launch?" + "id=" + str + ":" + instance_id + "~private(" + user_id + ")~nonce(" + nonce + ")"
+ while True
+  if World_Load_End()
+   exec("cmd /c start=" + world_url )
+   sleep(check_interval)
+   Result = true
+   break
+  else
+   sleep(check_interval)
+  endif
+ wend
+fend
+
+//ランダムUUID生成
+function RandomUUID()
+  result = rand16(8) + "-" + rand16(4) + "-4" + rand16(3) + "-" + rvariant() + rand16(3) + "-" + rand16(12)
+fend
+
+//ランダム16進数生成
+function rand16(len)
+  c="0123456789abcdef"
+  str = ""
+  for i = 1 to len
+    str = str + copy(c,random(length(c)+1),1)
+  next
+  result = str
+fend
+
+//バリアントを含むランダム値生成
+function rvariant()
+  c="89ab"
+  result = copy(c,random(length(c)+1),1)
+fend
+
+// ワールドロード中はfalse、それ以外はtrue、ロード中の画面の色(青緑)で判定
+function World_Load_End()
+ // VRCウィンドウのID取得
+ w_id = getid( "VRChat","UnityWndClass" )
+ ifb !(w_id = -1) // ID取得失敗時はスキップする
+  mouseorg( w_id ,2 ,MORG_FORE )
+  // VRCウィンドウをアクティブにする
+  acw(w_id)
+  c　=　PeekColor(100, 100)
+  c_r = Color_Red(c)
+  c_g = Color_Green(c)
+  c_b = Color_Blue(c)
+
+  //ロード中の緑色が表示されているか判定
+  if (c_r < 5) and (c_g > 52) and (c_g < 72) and (c_b > 55) and (c_b < 75)
+   Result = false // 緑色(ロード中)
+  else
+   Result = true // 緑色でない(ロード完了)
+   sleep(60)
+   //VRChatウィンドウを閉じる
+   ctrlwin(w_id, CLOSE)
+   sleep(20)
+  endif
+ else
+  Result = true // VRChatが起動していない
+ endif
+fend
+
+// 色取得
+function Color_Red(c)
+ Result = c and $FF
+fend
+
+function Color_Green(c)
+ Result = (c and $FF00) / $100
+fend
+
+function　Color_Blue(c)
+ Result = (c and $FF0000) / $10000
+fend
