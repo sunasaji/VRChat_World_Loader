@@ -41,7 +41,12 @@ function World_Open(str)
  world_url = "vrchat://launch?" + "id=" + str + ":" + instance_id + "~private(" + user_id + ")~nonce(" + nonce + ")"
  while True
   if World_Load_End()
+   // アクティブウィンドウのID取得
+   a_id = getid( GET_ACTIVE_WIN )
    exec("cmd /c start=" + world_url )
+   sleep(15)
+   // 元のアクティブウィンドウをアクティブにする
+   acw(a_id)
    sleep(check_interval)
    Result = true
    break
@@ -74,6 +79,8 @@ fend
 
 // ワールドロード中はfalse、それ以外はtrue、ロード中の画面の色(青緑)で判定
 function World_Load_End()
+ // アクティブウィンドウのID取得
+ a_id = getid( GET_ACTIVE_WIN )
  // VRCウィンドウのID取得
  w_id = getid( "VRChat","UnityWndClass" )
  ifb !(w_id = -1) // ID取得失敗時はスキップする
@@ -83,6 +90,8 @@ function World_Load_End()
   c_r = PeekColor(100,100,COL_R) //x:100,y:100の位置の赤色成分を取得
   c_g = PeekColor(100,100,COL_G) //x:100,y:100の位置の緑色成分を取得
   c_b = PeekColor(100,100,COL_B) //x:100,y:100の位置の青色成分を取得
+  // 元のアクティブウィンドウをアクティブにする
+  acw(a_id)
 
   //ロード中の緑色が表示されているか判定
   if (c_r < 5) and (c_g > 52) and (c_g < 72) and (c_b > 55) and (c_b < 75)
