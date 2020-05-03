@@ -80,10 +80,9 @@ function World_Load_End()
   mouseorg( w_id ,2 ,MORG_FORE )
   // VRCウィンドウをアクティブにする
   acw(w_id)
-  c　=　PeekColor(100, 100)
-  c_r = Color_Red(c)
-  c_g = Color_Green(c)
-  c_b = Color_Blue(c)
+  c_r = PeekColor(100,100,COL_R) //x:100,y:100の位置の赤色成分を取得
+  c_g = PeekColor(100,100,COL_G) //x:100,y:100の位置の緑色成分を取得
+  c_b = PeekColor(100,100,COL_B) //x:100,y:100の位置の青色成分を取得
 
   //ロード中の緑色が表示されているか判定
   if (c_r < 5) and (c_g > 52) and (c_g < 72) and (c_b > 55) and (c_b < 75)
@@ -98,17 +97,4 @@ function World_Load_End()
  else
   Result = true // VRChatが起動していない
  endif
-fend
-
-// 色取得
-function Color_Red(c)
- Result = c and $FF
-fend
-
-function Color_Green(c)
- Result = (c and $FF00) / $100
-fend
-
-function　Color_Blue(c)
- Result = (c and $FF0000) / $10000
 fend
