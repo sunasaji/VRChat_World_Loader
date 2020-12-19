@@ -63,19 +63,6 @@ function RandomUUID()
     endwith
 fend
 
-//ランダム16進数生成
-function rand16(len)
-    // 最大32文字
-    result = copy(replace(RandomUUID(), "-", ""), 1, len)
-fend
-
-
-//バリアントを含むランダム値生成
-function rvariant()
-  c="89ab"
-  result = copy(c,random(length(c)+1),1)
-fend
-
 // ワールドロード中はfalse、それ以外はtrue、ロード中の画面の色(青緑)で判定
 function World_Load_End()
  // アクティブウィンドウのID取得
