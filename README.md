@@ -13,7 +13,7 @@ https://www.vector.co.jp/soft/winnt/util/se115105.html
 ![01_login_click_icon.png](images/01_login_click_icon.png)  
 4. ブラウザのアドレスバーに出るUser IDを確認する。  
 ![02_check_user_id.png](images/02_check_user_id.png)
-5. 「vrchat_world_loader.uws」をメモ帳で開き、「user_id = 」から始まる行の「usr_xxx...」の部分に、自分のユーザIDを設定して保存する。  
+5. 「vrchat_world_loader.uws」をメモ帳で開き、「user_id = 」から始まる行の「usr_000...」の部分に、自分のユーザIDを設定して保存する。  
 ![03_paste_user_id.png](images/03_paste_user_id.png)
 6. 開きたいワールドのIDが記入されたスクリプト(vket4_world_loader.uwsなど)を、UWSC.exeにドラッグ＆ドロップして放置する。数分おきにVRCウィンドウがアクティブになり、ワールドが自動でロードされる。
 

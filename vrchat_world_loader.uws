@@ -11,7 +11,7 @@ PUBLIC instance_id, check_interval, user_id
 // 4. 開きたいワールドのIDが記入されたスクリプトを、UWSC.exeにドラッグ＆ドロップして放置する。
 //    数分おきにVRCウィンドウがアクティブになり、ワールドが自動でロードされる。
 
-user_id = "usr_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+user_id = "usr_00000000-0000-4000-8000-000000000000"
 
 // 自分のユーザIDは、
 //  vrchat.comにログインして、左上の自分のアイコンをクリックすると
