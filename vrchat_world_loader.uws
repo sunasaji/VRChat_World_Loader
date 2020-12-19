@@ -58,18 +58,17 @@ fend
 
 //ランダムUUID生成
 function RandomUUID()
-  result = rand16(8) + "-" + rand16(4) + "-4" + rand16(3) + "-" + rvariant() + rand16(3) + "-" + rand16(12)
+    with createoleobj("Scriptlet.TypeLib")
+        result = betweenstr(.Guid(), "{", "}")
+    endwith
 fend
 
 //ランダム16進数生成
 function rand16(len)
-  c="0123456789abcdef"
-  str = ""
-  for i = 1 to len
-    str = str + copy(c,random(length(c)+1),1)
-  next
-  result = str
+    // 最大32文字
+    result = copy(replace(RandomUUID(), "-", ""), 1, len)
 fend
+
 
 //バリアントを含むランダム値生成
 function rvariant()
