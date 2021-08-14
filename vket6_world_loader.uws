@@ -1,0 +1,35 @@
+//vket6_world_loader
+//Vケット6のワールドを順次ロードするuwscスクリプト
+//License: CC0
+
+CALL vrchat_world_loader.uws
+
+//以下の順番でワールドをロードする。
+//多数のワールドがあるので、行きたい順番に並べ替えて使う。
+//ロード不要のワールドは、World_Openの前に「//」を入れるとスキップされる。
+
+//比較的容量の小さいQuest用ワールドを先に読み込む順にしている。
+//PC用ワールドなど、先に読み込みたいワールドがある場合は順番を入れ替えて使う。
+
+ World_Open("wrld_2e9c52e8-e9ad-477b-954f-0076036a4977") //VketMall Proto Entrance-East Fair1 Quest
+ World_Open("wrld_2dd0c20c-b165-483a-80e3-d25c22b78384") //VketMall Proto Entrance-West Fair1 Quest
+ World_Open("wrld_324b8d48-b124-4ab9-9bec-54d035d0b6dd") //VketMall Proto Furry Fury QUEST
+ World_Open("wrld_32ea0529-08d6-4bb5-90d7-de2ff1bdd917") //VketMall Proto Jack'n Box QUEST
+ World_Open("wrld_61214c7f-fa1e-4e25-8880-b5306f36895a") //VketMall Proto Garage․ avatars QUEST
+ World_Open("wrld_36818d21-1af2-4c60-8c7a-474201c80846") //VketMall Proto Argento QUEST
+ World_Open("wrld_5428de22-d699-4615-b1e2-edf49b3ec943") //VketMall Proto Open Closet QUEST
+ World_Open("wrld_56b5cad6-20c5-458e-aabe-fe96905caafc") //VketMall Proto Tracy ＆ Percy QUEST
+ World_Open("wrld_5f0e97a0-7025-4da4-96cc-afe7e2a78718") //VketMall Proto 三千世界 Three Thousand Worlds QUEST
+ World_Open("wrld_630029e8-d0da-46cb-9655-a1fe299e8e3d") //VketMall Proto Scratch Road QUEST
+ World_Open("wrld_19f21838-8e61-4889-91f4-6b7c5ca25ba2") //VketMall Proto Entrance-East Fair1
+ World_Open("wrld_255e868e-29be-4eb0-8343-8cd0de07e11d") //VketMall Proto Entrance-West Fair1
+ World_Open("wrld_1252c162-3dfe-4790-b2d4-b1ff8c05530e") //World Festi-VR Core
+ World_Open("wrld_10c387d4-da42-4abd-a18c-56a6002b9483") //Vket6 Japan Festi-VR En-Nichi
+ World_Open("wrld_0444a66f-2b60-48fa-9e6b-5888a77539a1") //Vket6 Carayol SandPoem
+ World_Open("wrld_160ae29e-a094-41b4-b72e-163626790590") //Vket6 Carayol WindChorus
+ World_Open("wrld_199e12e7-ed57-4851-9bb5-190fe66ab64a") //Vket6 Laguna Conchiglie
+ World_Open("wrld_18858862-d080-4b4a-a1fc-7d62ba7a2bfa") //Vket6 Laguna Fiore
+ World_Open("wrld_25399e9f-effe-4b1f-b9c1-a4d788a601ee") //Vket6 KujaMarket Greed
+ World_Open("wrld_2d99c744-6ab5-4a4b-b5bb-8e8e67d6a5cb") //Vket6 KujaMarket Obsession
+ World_Open("wrld_2a05d03b-de3f-4063-96ce-3835dfb3e56f") //TOKYO MARUI VRC Survival Game Field ＂Island＂
+ World_Open("wrld_8982b46c-8e23-45be-a088-5ea72f7aa845") //EMISSION Summer Rift
