@@ -2,7 +2,7 @@
 //VRChatのワールドを順次ロードするuwscスクリプト
 //License: CC0
 
-PUBLIC instance_id, check_interval, user_id
+PUBLIC instance_id, check_interval, user_id, region
 
 //使い方
 // 1. VR機器をPCから外してデスクトップモードでVRChatが起動できるようにする。
@@ -27,6 +27,9 @@ instance_id=int(random(100000))
 //ワールドロード完了をチェックする間隔(単位：秒)
 check_interval = 300
 
+//リージョン(jp|eu|us)
+region = "jp"
+
 //ワールドをロードする
 //World_Open("wrld_...") の wrld_... の部分にワールドIDを入れて、行頭の「//」を消すと、
 //そのワールドをロードする。ロードが終わるとVRChatを一旦閉じて、次のワールドをロードする。
@@ -38,7 +41,7 @@ check_interval = 300
 //ワールドを開いて、ロード完了を待つ
 function World_Open(str)
  nonce = RandomUUID()
- world_url = "vrchat://launch?" + "id=" + str + ":" + instance_id + "~private(" + user_id + ")~nonce(" + nonce + ")"
+ world_url = "vrchat://launch?" + "id=" + str + ":" + instance_id + "~private(" + user_id + ")~region(" + region + ")~nonce(" + nonce + ")"
  while True
   if World_Load_End()
    // アクティブウィンドウのID取得
@@ -59,7 +62,7 @@ fend
 //ランダムUUID生成
 function RandomUUID()
     with createoleobj("Scriptlet.TypeLib")
-        result = betweenstr(.Guid(), "{", "}")
+        result = strconv(betweenstr(.Guid(), "{", "}"),SC_LOWERCASE)
     endwith
 fend
 
