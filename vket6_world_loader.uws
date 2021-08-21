@@ -11,18 +11,22 @@ CALL vrchat_world_loader.uws
 //比較的容量の小さいQuest用ワールドを先に読み込む順にしている。
 //PC用ワールドなど、先に読み込みたいワールドがある場合は順番を入れ替えて使う。
 
- World_Open("wrld_2e9c52e8-e9ad-477b-954f-0076036a4977") //VketMall Proto Entrance-East Fair1 Quest
- World_Open("wrld_2dd0c20c-b165-483a-80e3-d25c22b78384") //VketMall Proto Entrance-West Fair1 Quest
- World_Open("wrld_324b8d48-b124-4ab9-9bec-54d035d0b6dd") //VketMall Proto Furry Fury QUEST
- World_Open("wrld_32ea0529-08d6-4bb5-90d7-de2ff1bdd917") //VketMall Proto Jack'n Box QUEST
- World_Open("wrld_61214c7f-fa1e-4e25-8880-b5306f36895a") //VketMall Proto Garage․ avatars QUEST
- World_Open("wrld_36818d21-1af2-4c60-8c7a-474201c80846") //VketMall Proto Argento QUEST
- World_Open("wrld_5428de22-d699-4615-b1e2-edf49b3ec943") //VketMall Proto Open Closet QUEST
- World_Open("wrld_56b5cad6-20c5-458e-aabe-fe96905caafc") //VketMall Proto Tracy ＆ Percy QUEST
- World_Open("wrld_5f0e97a0-7025-4da4-96cc-afe7e2a78718") //VketMall Proto 三千世界 Three Thousand Worlds QUEST
- World_Open("wrld_630029e8-d0da-46cb-9655-a1fe299e8e3d") //VketMall Proto Scratch Road QUEST
- World_Open("wrld_19f21838-8e61-4889-91f4-6b7c5ca25ba2") //VketMall Proto Entrance-East Fair1
- World_Open("wrld_255e868e-29be-4eb0-8343-8cd0de07e11d") //VketMall Proto Entrance-West Fair1
+ World_Open("wrld_6f612ca0-f7b9-4a98-bb97-7a8883bfdc05") //VketMall Proto Entrance-West Fair2 Quest
+ World_Open("wrld_757d0463-0af5-4ec0-845d-46a4fabd3a96") //VketMall Proto Entrance-East Fair2 Quest
+ World_Open("wrld_1072eb77-24f0-4ee7-80e4-074cb3fef844") //VketMall Proto Entrance-East Fair2
+ World_Open("wrld_47fa1499-5141-4b58-b026-5a013ffa3d4f") //VketMall Proto Entrance-West Fair2
+ World_Open("wrld_772bc550-28a0-4552-8128-fcce44264300") //VketMall Proto Eisenburg
+ World_Open("wrld_903f82c7-8934-4d36-ae10-c399c36f2b7a") //VketMall Proto Ratatoskr
+ World_Open("wrld_9d1d230d-9f01-42bc-ad39-d175260357d0") //VketMall Proto Anne Nielsen
+ World_Open("wrld_b2620eda-c67e-4cc3-a017-0163ba20e114") //VketMall Proto Funky Picky Monkeys
+ World_Open("wrld_bd00d5ce-22dc-4bde-aa1c-3529e6c34682") //VketMall Proto Colorful Cafe
+ World_Open("wrld_c2675a12-a9d2-49f4-a822-0edc9f2501d1") //VketMall Proto けもみみっこ Kemomimi Girls
+ World_Open("wrld_d44cfe3e-3e67-41b7-a794-76472ae7469b") //VketMall Proto Garage․ worlds
+ World_Open("wrld_db67b6bb-b801-46ae-9610-ea940e381aa6") //VketMall Proto 牙科 Ya-ke
+ World_Open("wrld_df9db2f9-0415-4ab1-bec4-b1d5d0abc625") //VketMall Proto Philip's Sheep
+ World_Open("wrld_e56c2ec5-0258-43fa-bd8d-a8d7109a4581") //VketMall Proto Twinkle-Twinkle
+ World_Open("wrld_45ff7403-6e38-4a3b-aa82-6d4035047647") //Mall MORNING GLORY
+ World_Open("wrld_6baf3e5f-cc57-4b1e-ac91-4fba8347d849") //VketMall Proto 五色屋（ごしきや） Goshikiya
  World_Open("wrld_1252c162-3dfe-4790-b2d4-b1ff8c05530e") //World Festi-VR Core
  World_Open("wrld_10c387d4-da42-4abd-a18c-56a6002b9483") //Vket6 Japan Festi-VR En-Nichi
  World_Open("wrld_0444a66f-2b60-48fa-9e6b-5888a77539a1") //Vket6 Carayol SandPoem
