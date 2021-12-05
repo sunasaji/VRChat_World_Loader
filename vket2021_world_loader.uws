@@ -1,0 +1,42 @@
+//vket2021_world_loader
+//Vケット2021のワールドを順次ロードするuwscスクリプト
+//License: CC0
+
+CALL vrchat_world_loader.uws
+
+//以下の順番でワールドをロードする。
+//多数のワールドがあるので、行きたい順番に並べ替えて使う。
+//ロード不要のワールドは、World_Openの前に「//」を入れるとスキップされる。
+
+//エントランス
+World_Open("wrld_c060e032-9f4c-49ea-a5db-b1921fb18a58") //Virtual Market 2021 Ent-LAN-ce
+
+//Questワールド
+World_Open("wrld_60f15f34-7115-43f9-b31b-58fa4ce00e27") //Vket2021 Quest World Festi-VR ＂Core＂ Windmill Town - Harbor
+World_Open("wrld_ac64ebdc-e9f7-42c2-a8bb-be4f3b8ba98f") //Vket2021 Quest World Festi-VR ＂Core＂ Windmill Town - Clocktower
+World_Open("wrld_efeba245-29ce-42a8-ab7f-c4bc47c8b28b") //Vket2021 Quest Cradle of Shooting Stars Metekolebka - Oksteltov
+World_Open("wrld_e470ca01-348f-47a8-bfd3-8bfe3ed730fd") //Vket2021 Quest Cradle of Shooting Stars Metekolebka - Questeltov
+World_Open("wrld_852eba10-fe7c-41a4-a60c-e00069452c1e") //Vket2021 Quest Edo Citadel Redux - Edo Citadel East
+World_Open("wrld_190323cf-ec53-4fd0-bf84-9d6d7c5c899d") //Vket2021 Quest Edo Citadel Redux - Edo Citadel West
+
+//PCワールド
+World_Open("wrld_d145f6d7-1e64-4698-bf96-d0db81126582") //Parareal Akihabara
+World_Open("wrld_85f25d1e-8661-45a5-a7fb-7a6fa6d756b3") //Parareal Shibuya
+World_Open("wrld_1d41521b-de6b-4a98-a635-802f51ac6944") //Vket2021 Vket Academy - Day
+World_Open("wrld_888b8bd7-6b27-487b-9106-eff1364f2a30") //Vket2021 Vket Academy - Night
+World_Open("wrld_e8da0f9e-4b93-4852-949f-84ab9fd8c755") //Vket2021 Almerea˸ The Town of New Beginnings - Adventurous spring
+World_Open("wrld_bf6bb18f-94b4-4e24-b641-182793c8d5dc") //Vket2021 Almerea˸ The Town of New Beginnings - Season of harvest
+World_Open("wrld_5cabbc31-e2f0-41f1-b1bf-c7f29f3edb81") //Vket2021 Petalchime Capital Aulschnelule
+World_Open("wrld_10f3783c-9d60-4224-87fd-43f3b93da8d3") //Vket2021 Spildsubmara˸ The Abandoned Seafloor City
+World_Open("wrld_4e4f73ab-6295-4c1b-9096-3007d15b4edc") //Vket2021 Valhalla of Iron Ravens - Machina˸ The Steel Arena
+World_Open("wrld_d8eb97ca-9635-42b9-9290-f69fd1ed7bb1") //Vket2021 Valhalla of Iron Ravens - Rock Bottom˸ The Shanty Slums
+World_Open("wrld_c9a2d7ab-9491-44b0-beae-f3f12668587b") //Vket2021 Toy Toy Factory
+World_Open("wrld_7fd66a0f-ff9a-43a5-bf67-4dc9a4734131") //Vket2021 Christmas Party without Santa
+World_Open("wrld_7ce32e29-5825-4c43-b10d-0cb5a5e8897e") //Vket2021 Avatar Carousel
+World_Open("wrld_4ec32cf1-8433-402a-b1ac-48d0d54d9d18") //Vket2021 Edo Citadel Redux - Edo Citadel
+World_Open("wrld_5e3515f5-819c-46f2-be62-13591f76f01b") //Vket2021 Edo Citadel Redux - Edo Hanamachi
+World_Open("wrld_cdc0932c-2ebf-45dd-8738-2941c16b92d0") //Vket2021 Poppin' Jump - Neon Purple
+World_Open("wrld_4f73aad2-6887-4f85-9fb7-7c075562b849") //Vket2021 Poppin' Jump - Rich Gold
+World_Open("wrld_8982b46c-8e23-45be-a088-5ea72f7aa845") //EMISSION
+World_Open("wrld_2bafa7ad-fb6d-48ef-8c00-b6eb6b8bfab1") //TOKYO MARUI VRC Survival Game Field ＂CONQUEST＂
+World_Open("wrld_2a05d03b-de3f-4063-96ce-3835dfb3e56f") //TOKYO MARUI VRC Survival Game Field ＂Island＂
